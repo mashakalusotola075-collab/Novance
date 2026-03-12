@@ -1,22 +1,89 @@
-
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>Novance Movies</title>
+
+<style>
+
+body{
+background:black;
+color:white;
+font-family:Arial;
+text-align:center;
+}
+
+h1{
+color:red;
+}
+
+.movies{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.movie{
+width:200px;
+}
+
+.movie img{
+width:100%;
+border-radius:10px;
+}
+
+button{
+background:red;
+color:white;
+border:none;
+padding:10px;
+border-radius:5px;
+cursor:pointer;
+}
+
+</style>
+
 </head>
 
-<body style="background:black;color:white;text-align:center;font-family:sans-serif;">
+<body>
 
 <h1>🎬 NOVANCE MOVIES</h1>
-<p>Karibu kwenye website yangu ya movies</p>
+<p>Chagua movie uangalie</p>
 
-<h2>Movie ya Kwanza</h2>
+<div class="movies">
 
-<video width="320" controls>
-<source src="movie.mp4" type="video/mp4">
-</video>
+<div class="movie">
+<img src="https://img.youtube.com/vi/VIDEO1/hqdefault.jpg">
+<br><br>
+<button onclick="watch1()">Watch</button>
+</div>
 
-<p>🔒 Ili kuangalia movie lipia kwanza</p>
+<div class="movie">
+<img src="https://img.youtube.com/vi/VIDEO2/hqdefault.jpg">
+<br><br>
+<button onclick="watch2()">Watch</button>
+</div>
+
+</div>
+
+<br><br>
+
+<div id="player"></div>
+
+<script>
+
+function watch1(){
+document.getElementById("player").innerHTML =
+'<iframe width="350" height="200" src="https://www.youtube.com/embed/VIDEO1" frameborder="0" allowfullscreen></iframe>';
+}
+
+function watch2(){
+document.getElementById("player").innerHTML =
+'<iframe width="350" height="200" src="https://www.youtube.com/embed/VIDEO2" frameborder="0" allowfullscreen></iframe>';
+}
+
+</script>
 
 </body>
 </html>
